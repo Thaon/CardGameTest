@@ -3,7 +3,8 @@ using System.Collections;
 
 public enum CardType {Brain, Chassie, Weapon}
 
-public class Card : MonoBehaviour {
+public class Card : MonoBehaviour
+{
 
 	#region Member variables
 	
@@ -15,19 +16,20 @@ public class Card : MonoBehaviour {
 	#endregion
 
 
-	
 	#region Getters and Setters
 	
-	int GetStrength() {return m_str;}
-	int GetDefense() {return m_def;}
-	int GetSpeed() {return m_spd;}
-	int GetIntelligence() {return m_int;}
-	string GetFlavourText() {return m_flavourText;}
-	CardType GetCardType() {return m_type;}
+	public int GetStrength() {return m_str;}
+	public int GetDefense() {return m_def;}
+	public int GetSpeed() {return m_spd;}
+	public int GetIntelligence() {return m_int;}
+	public string GetFlavourText() {return m_flavourText;}
+	public CardType GetCardType() {return m_type;}
+	public Sprite GetIcon() {return m_icon;}
 	
 	#endregion
 	
-	void BuildCard(Sprite icon, CardType type, int str, int def, int spd, int inte)
+	
+	public Card(Sprite icon, CardType type, int str, int def, int spd, int inte)
 	{
 		m_icon = icon;
 		m_type = type;
@@ -36,4 +38,5 @@ public class Card : MonoBehaviour {
 		m_spd = spd;
 		m_int = inte;
 	}
+	
 }
